@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barroco Drinks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="iconodef.ico">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/220a75e317.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="nav.png" width="125" height="50" alt="Barroco Drinks Logo">
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <ul>
+                <li><a href="#about" onclick="showSection('about')">Sobre mí</a></li>
+                <li><a href="#servicios" onclick="showSection('servicios')">Servicios</a></li>
+                <li><a href="#galeria" onclick="showSection('galeria')">Galería</a></li>
+                <li><a href="brrocoo carta.pdf" target="_blank">Carta de tragos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--Sobre mí -->
+    <section id="about" class="about section">
+        <div class="container">
+            <h2>Sobre mí</h2>
+            <p>Soy un gordo que hace tragos. Creador de la Llamarada Homero. Abrazo</p>
+            <img src="dani.jpg" alt="img" >
+        </div>
+    </section>
+
+    <!--Servicios -->
+    <section id="servicios" class="servicios section">
+        <div class="container">
+            <h2>Servicios</h2>
+            <p>
+                Ofrezco un servicio de coctelería profesional para todo tipo de eventos, desde elegantes bodas y divertidas fiestas de 15 años hasta celebraciones corporativas y reuniones privadas. Con una barra móvil completamente equipada, me especializo en la creación de cócteles personalizados que se adaptan al estilo y temática de cada evento, asegurando que cada bebida sea una experiencia única. Ya sea un brindis inolvidable en una boda o cócteles creativos para sorprender a tus invitados, mi objetivo es elevar la atmósfera de tu celebración con calidad y sabor excepcionales.
+            </p>
+        </div>
+    </section>
+
+    <!--Galería -->
+    <section id="galeria" class="galeria section">
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="grid-gallery">
+                <img src="https://i0.wp.com/parquelasamericas.com.gt/wp-content/uploads/2022/04/Mojisto-mejores-tragos-para-mujeres.jpg?resize=900%2C616&ssl=1" alt="Coctel 1">
+                <img src="https://www.clarin.com/2022/01/17/QwCr1ph7M_360x240__1.jpg" alt="Coctel 2">
+                <img src="https://lacanasteria.com/wp-content/uploads/2023/05/cocteles-y-tragos-con-whisky.png" alt="Coctel 3">
+                <img src="https://i0.wp.com/parquelasamericas.com.gt/wp-content/uploads/2022/04/Margarita-mejores-tragos-para-las-mujeres.jpg?resize=900%2C601&ssl=1" alt="Coctel 4">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container contenido">
+            <p>&copy; 2024 Barroco Drinks. Todos los derechos reservados</p>
+            <a href="https://www.instagram.com/ldan_han/" target="_blank"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Script para cambiar entre secciones -->
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Muestra la sección seleccionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Mostrar solo la primera sección por defecto
+        document.addEventListener("DOMContentLoaded", function() {
+            showSection('about');
+        });
+    </script>
+</body>
+</html>
